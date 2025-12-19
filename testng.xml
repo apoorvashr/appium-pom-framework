@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <parameter name="platformName" value="Android"/>
+    <parameter name="platformVersion" value="16"/>
+    <parameter name="deviceName" value="32151FDH2003JU"/>
+
+    <test name="Tests">
+        <classes>
+            <class name="org.example.SplashTest"/>
+        </classes>
+    </test>
+</suite>
