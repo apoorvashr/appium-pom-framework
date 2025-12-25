@@ -41,10 +41,11 @@ import org.openqa.selenium.support.PageFactory;
              case SIP :
                  clickElement(calculatorImg);
                  System.out.println("method---"+calculatorImg);
-                 return new CalculateLoanPage(getDriver());
+                 return new CalculateSIPDashPage(getDriver());
 
              case QUICK_SIP:
                  System.out.println("method 2---");
+
                  return "";
          }
 

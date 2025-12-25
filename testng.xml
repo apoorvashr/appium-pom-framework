@@ -14,6 +14,7 @@
             <class name="org.example.NumberFormatTest"/>
             <class name="org.example.PurchasePrimumTest"/>
             <class name="org.example.DashboradTest"/>
+            <class name="org.example.CalculateSIPDashTest" />
             <!-- <class name="org.example.DashboradTest"/>-->
         </classes>
     </test>

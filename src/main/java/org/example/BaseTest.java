@@ -84,14 +84,14 @@ public class BaseTest {
         wait.until(ExpectedConditions.invisibilityOf(element));
     }
 
-   /* public void sendKeys(WebElement element, String text) {
+    public void sendKeys(WebElement element, String text) {
        try {
            waitForvisibility(element);
            element.sendKeys(text);
        } catch (Exception e) {
            System.out.println(" catch sendkeys");
        }
-    }*/
+    }
 
     public String getAttribute(WebElement element, String attribute) {
         try {

@@ -1,7 +1,5 @@
 package org.example;
 
-import io.appium.java_client.android.AndroidDriver;
-import org.example.pages.CalculateLoanPage;
 import org.example.pages.CalculatorType;
 import org.example.pages.DashboardPage;
 import org.testng.annotations.BeforeMethod;
