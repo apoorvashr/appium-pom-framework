@@ -6,6 +6,7 @@ import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 import io.appium.java_client.service.local.flags.GeneralServerFlag;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
@@ -20,11 +21,13 @@ public class BaseTest {
     protected static AndroidDriver driver;
     private static AppiumDriverLocalService service;
 
-    public BaseTest() {
+    @FindBy(xpath = "//android.widget.ProgressBar[@text=\"0.0\"]")
+    public WebElement progressBar;
 
+    public BaseTest() {
     }
 
-    public AndroidDriver getDriver() {
+    protected AndroidDriver getDriver() {
         return driver;
     }
 
@@ -53,14 +56,14 @@ public class BaseTest {
                 service = new AppiumServiceBuilder()
                         .usingPort(4723)
                         .withIPAddress("127.0.0.1")
-                        //.withAppiumJS(new File("C:\\Users\\Admin\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
                         .usingDriverExecutable(new File("C:\\Program Files\\nodejs\\node.exe"))
                         .withAppiumJS(new File("C:\\Users\\Admin\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
-                        //.usingDriverExecutable(new File("C:\\Program Files\\nodejs\\node.exe"))
                         .withArgument(GeneralServerFlag.LOG_LEVEL, "info")
                         .build();
-
                 service.start();
+                //splash screen
+                waitForInVisibility(progressBar);
+               // Thread.sleep(2000);
                 System.out.println("Server Started successfully");
 
             } else {
@@ -71,24 +74,51 @@ public class BaseTest {
         }
     }
 
-    public void waitForvisibility(WebElement element) {
+    public void waitForvisibility(WebElement element)  {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
-    public void sendKeys(WebElement element, String text) {
-        waitForvisibility(element);
-        element.sendKeys(text);
+    public void waitForInVisibility(WebElement element)  {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.invisibilityOf(element));
     }
+
+   /* public void sendKeys(WebElement element, String text) {
+       try {
+           waitForvisibility(element);
+           element.sendKeys(text);
+       } catch (Exception e) {
+           System.out.println(" catch sendkeys");
+       }
+    }*/
 
     public String getAttribute(WebElement element, String attribute) {
-        waitForvisibility(element);
+        try {
+            waitForvisibility(element);
+
+        } catch (Exception e) {
+            System.out.println(" catch sendkeys");
+        }
+
         return element.getAttribute(attribute);
     }
-
-    public void clickElement(WebElement element) {
+    public boolean clickElement(WebElement element) {
+     boolean click = false;
+      try {
         waitForvisibility(element);
-        element.click();
+         element.click();
+          click =true;
+          System.out.println(" click element value" + click);
+    } catch (Exception e) {
+        System.out.println(" click element exception basetest" );
+       // click = false;
+    }
+      return click;
+}
+
+    public String getFocusedActivity() {
+        return ((AndroidDriver) driver).currentActivity();
     }
 
     @AfterSuite(alwaysRun = true)
@@ -99,7 +129,7 @@ public class BaseTest {
         }
     }
 
-    @AfterClass(alwaysRun = true)
+    @AfterSuite(alwaysRun = true)
     public void teardownDriver() {
         if (driver != null) driver.quit();
     }

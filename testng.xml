@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
+<suite name="All Test Suite" verbose="10">
 
     <parameter name="platformName" value="Android"/>
     <parameter name="platformVersion" value="16"/>
@@ -8,7 +8,13 @@
 
     <test name="Tests">
         <classes>
-            <class name="org.example.SplashTest"/>
+            <!-- <class name="org.example.SplashTest"/>-->
+            <class name="org.example.LanguageSelectionTest"/>
+            <class name="org.example.SIPCalcTest"/>
+            <class name="org.example.NumberFormatTest"/>
+            <class name="org.example.PurchasePrimumTest"/>
+            <class name="org.example.DashboradTest"/>
+            <!-- <class name="org.example.DashboradTest"/>-->
         </classes>
     </test>
 </suite>

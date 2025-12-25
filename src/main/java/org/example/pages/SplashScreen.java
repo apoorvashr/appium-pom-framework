@@ -1,19 +1,25 @@
 package org.example.pages;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import org.example.BaseTest;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
-public class SplashScreen {
-    AppiumDriver driver;
-    //  By splash = By.id("splash_screen_id"); // optional, if you can identify it
-    // By homeElement = By.id("home_screen_element_id");
+
+public class SplashScreen extends BaseTest {
+
+     @FindBy(xpath = "//android.widget.ProgressBar[@text=\"0.0\"]")
+    public WebElement progressBar;
 
     public SplashScreen(AppiumDriver driver) {
-        this.driver = driver;
+        PageFactory.initElements(new AppiumFieldDecorator(getDriver()), this);
     }
 
-    public void waitForSplashToDisappear() throws InterruptedException {
-        //  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10000));
-        Thread.sleep(6600);
-        //wait.until(ExpectedConditions.visibilityOfElementLocated(homeElement));
+    public void navigatetoOnboarding() throws Exception {
+        waitForInVisibility(progressBar);
+
+       // return new LanguageSelectionPage(driver);
     }
 }
