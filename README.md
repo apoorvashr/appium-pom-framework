@@ -37,8 +37,6 @@ Key UI components automated:
 
 ---
 
-.
-
 📦 Dependencies & Versions
 
 This project uses the following libraries and tools:
@@ -51,6 +49,10 @@ Library	Version	Purpose
 Appium Java Client	10.0.0	Mobile automation for Android
 TestNG	7.10.2	Test execution & test suite management
 SLF4J Simple	2.0.13	Logging framework
+
+
+## 🗂 Project Structure
+<img width="740" height="302" alt="image" src="https://github.com/user-attachments/assets/4e060439-00e9-4745-ab3a-a87293870cf2" />
 
 
 ▶️ How to Run Tests
