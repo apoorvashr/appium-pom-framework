@@ -53,27 +53,6 @@ TestNG	7.10.2	Test execution & test suite management
 SLF4J Simple	2.0.13	Logging framework
 
 
-## 📂 Project Structure
-
-appium-pom-framework
-│
-├── src/main/java
-│ ├── base
-│ │ └── BaseTest.java
-│ ├── pages
-│ │ └── SipCalculatorPage.java
-│ └── utils
-│ └── DriverFactory.java
-│
-├── src/test/java
-│ └── tests
-│ └── SipCalculatorTest.java
-│
-├── testng.xml
-├── pom.xml
-└── README.md
-
-
 ▶️ How to Run Tests
 
 1️⃣ Clone the Repository
@@ -87,6 +66,7 @@ mvn test
 
 or
 Right click → testng.xml → Run
+
 
 Framework Highlights
 
@@ -103,8 +83,8 @@ Framework Highlights
 ⏳ Screenshot capture on failure
 
 
-📦 Best Practices
 
+📦 Best Practices
 ✔ Use meaningful test names
 ✔ Keep page locators in Page classes
 ✔ Avoid hard waits — use explicit waits
@@ -114,6 +94,7 @@ Framework Highlights
 
 Contributions are welcome!
 Feel free to open issues and submit pull requests. 😊
+
 
 📞 Contact
 
