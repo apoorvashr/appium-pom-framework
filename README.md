@@ -45,6 +45,7 @@ Java: 25 (Preview features enabled)
 
 Maven: Project build & dependency management
 🔹 Automation Libraries
+
 Library	Version	Purpose
 Appium Java Client	10.0.0	Mobile automation for Android
 TestNG	7.10.2	Test execution & test suite management
@@ -59,10 +60,13 @@ SLF4J Simple	2.0.13	Logging framework
 
 1️⃣ Clone the Repository
 git clone https://github.com/Calculator-Application-Appium-Android.git
+
 2️⃣ Start Appium Server
 appium
+
 3️⃣ Start Emulator / Connect Device
 adb devices
+
 4️⃣ Execute Tests
 mvn test
 
