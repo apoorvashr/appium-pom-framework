@@ -51,18 +51,21 @@ TestNG	7.10.2	Test execution & test suite management
 SLF4J Simple	2.0.13	Logging framework
 
 
-## 🗂 Project Structure
-<img width="740" height="302" alt="image" src="https://github.com/apoorvashr/Calculator-Application-Appium-Android.git" />
-
+<img src="https://raw.githubusercontent.com/apoorvashr/Calculator-Application-Appium-Android/main/docs/images/project-structure.png" 
+     alt="Project Structure" 
+     width="740"/>
 
 ▶️ How to Run Tests
 
 1️⃣ Clone the Repository
-git clone https://github.com/apoorvashr/appium-pom-framework.git
+git clone https://github.com/apoorvashr/Calculator-Application-Appium-Android.git
+
 2️⃣ Start Appium Server
 appium
+
 3️⃣ Start Emulator / Connect Device
 adb devices
+
 4️⃣ Execute Tests
 mvn test
 
