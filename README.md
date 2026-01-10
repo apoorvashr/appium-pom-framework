@@ -1,122 +1,104 @@
-📱 SIP Calculator App – Mobile Automation Framework
+# 📱 SIP Calculator App – Mobile Automation Framework (Appium + Java)
 
-(Appium + Java + TestNG + POM)
+This repository contains an **end-to-end mobile automation testing framework** for the **SIP Calculator Android application**, built using **Appium, Java, TestNG, and Page Object Model (POM)**.
 
-This repository contains a complete end-to-end mobile automation testing framework for the SIP Calculator Android application, built using Appium, Java, TestNG, Maven, and Page Object Model (POM).
+🔗 **App Under Test (AUT):**  
+https://play.google.com/store/apps/details?id=com.continuum.sip.calculator
 
-It demonstrates real-world mobile automation practices including clean framework design, reusable page classes, and scalable test structure.
+---
 
-🔗 Application Under Test (AUT)
+## 🧪 Application Overview
 
-SIP Calculator – Android App
-👉 https://play.google.com/store/apps/details?id=com.continuum.sip.calculator
+The **SIP Calculator** app helps users calculate:
+- Systematic Investment Plan (SIP)
+- Lumpsum investment returns
+- Financial planning estimates
 
-🧪 Application Overview
+Key UI components automated:
+- Radio buttons (SIP / Lumpsum / Plan)
+- EditText input fields
+- Buttons (Calculate, Reset)
+- Result validations
 
-The SIP Calculator app helps users calculate financial investments such as:
+---
 
-📊 Systematic Investment Plan (SIP)
+## 🛠️ Tech Stack
 
-💰 Lumpsum Investments
+| Tool / Framework | Usage |
+|------------------|-------|
+| **Java** | Programming language |
+| **Appium** | Mobile automation |
+| **TestNG** | Test execution & reporting |
+| **Selenium WebDriver** | Element interactions |
+| **Page Object Model (POM)** | Framework design |
+| **Maven** | Dependency management |
+| **Android Emulator / Real Device** | Test execution |
+| **Git & GitHub** | Version control |
 
-📈 Financial Planning Estimates
+---
 
-Key UI Components Automated
+📦 Dependencies & Versions
 
-Radio Buttons (SIP / Lumpsum / Plan)
+This project uses the following libraries and tools:
+🔹 Build & Language
+Java: 25 (Preview features enabled)
 
-EditText input fields
-
-Calculate & Reset buttons
-
-Result validations
-
-🛠️ Tech Stack
-Tool / Framework	Usage
-Java (25)	Programming language
-Appium	Mobile automation
-TestNG	Test execution & reporting
-Selenium WebDriver	Element interactions
-Maven	Build & dependency management
-Page Object Model (POM)	Framework design
-Android Emulator / Real Device	Test execution
-Git & GitHub	Version control
-📦 Dependencies
+Maven: Project build & dependency management
+🔹 Automation Libraries
 Library	Version	Purpose
-Appium Java Client	10.0.0	Mobile automation
-TestNG	7.10.2	Test framework
-SLF4J Simple	2.0.13	Logging
-📂 Project Structure
-Calculator-Application-Appium-Android
-│
-├── src/main/java
-│   ├── base        → Driver & Appium setup
-│   ├── pages       → Page Object classes
-│   └── utils       → Reusable utilities
-│
-├── src/test/java
-│   └── tests       → TestNG test cases
-│
-├── testng.xml      → Test execution suite
-├── pom.xml         → Maven dependencies
-└── README.md
+Appium Java Client	10.0.0	Mobile automation for Android
+TestNG	7.10.2	Test execution & test suite management
+SLF4J Simple	2.0.13	Logging framework
 
-▶️ How to Run the Tests
+
+## 🗂 Project Structure
+<img width="740" height="302" alt="image" src="https://github.com/user-attachments/assets/4e060439-00e9-4745-ab3a-a87293870cf2" />
+
+
+▶️ How to Run Tests
+
 1️⃣ Clone the Repository
-git clone https://github.com/apoorvashr/Calculator-Application-Appium-Android.git
-
+git clone https://github.com/apoorvashr/appium-pom-framework.git
 2️⃣ Start Appium Server
 appium
-
-3️⃣ Start Emulator or Connect Device
+3️⃣ Start Emulator / Connect Device
 adb devices
-
-4️⃣ Run Tests
+4️⃣ Execute Tests
 mvn test
 
+or
+Right click → testng.xml → Run
 
-Or
-Right-click testng.xml → Run
 
-⭐ Framework Highlights
+Framework Highlights
 
 ✔ Page Object Model (POM)
-
 ✔ Clean and reusable code
-
-✔ Switch-case based RadioButton handling
-
+✔ Switch-case based RadioGroup handling
 ✔ Easily scalable for new screens
+✔ Industry-standard automation practices
 
-✔ Industry-standard automation framework design
 
 📈 Future Enhancements
 
 ⏳ Add Extent Reports
+⏳ Screenshot capture on failure
 
-⏳ Capture screenshots on failure
 
-⏳ Integrate with CI/CD (Jenkins / GitHub Actions)
 
-📦 Best Practices Followed
-
-Meaningful test and method names
-
-Page locators maintained only in Page classes
-
-No hard waits (uses explicit waits)
-
-Modular, maintainable code structure
+📦 Best Practices
+✔ Use meaningful test names
+✔ Keep page locators in Page classes
+✔ Avoid hard waits — use explicit waits
+✔ Add tests under src/test/java
 
 🤝 Contributions
 
 Contributions are welcome!
-Feel free to open Issues or submit Pull Requests to improve this framework.
+Feel free to open issues and submit pull requests. 😊
+
 
 📞 Contact
 
-For questions, improvements, or support:
-
+For questions, improvements, or help:
 📧 Email: apoorva.shr@gmail.com
-
-🔗 GitHub: https://github.com/apoorvashr
