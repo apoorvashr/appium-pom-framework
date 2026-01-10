@@ -51,9 +51,8 @@ TestNG	7.10.2	Test execution & test suite management
 SLF4J Simple	2.0.13	Logging framework
 
 
-<img src="https://raw.githubusercontent.com/apoorvashr/Calculator-Application-Appium-Android/main/docs/images/project-structure.png" 
-     alt="Project Structure" 
-     width="740"/>
+<img src="docs/images/project-structure.png" alt="Project Structure" width="740"/>
+
 
 ▶️ How to Run Tests
 
