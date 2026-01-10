@@ -58,7 +58,7 @@ SLF4J Simple	2.0.13	Logging framework
 ▶️ How to Run Tests
 
 1️⃣ Clone the Repository
-git clone https://github.com/apoorvashr/appium-pom-framework.git
+git clone https://github.com/Calculator-Application-Appium-Android.git
 2️⃣ Start Appium Server
 appium
 3️⃣ Start Emulator / Connect Device
