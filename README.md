@@ -52,7 +52,7 @@ SLF4J Simple	2.0.13	Logging framework
 
 
 ## 🗂 Project Structure
-<img width="740" height="302" alt="image" src="https://github.com/user-attachments/assets/4e060439-00e9-4745-ab3a-a87293870cf2" />
+<img width="740" height="302" alt="image" src="https://github.com/apoorvashr/Calculator-Application-Appium-Android.git" />
 
 
 ▶️ How to Run Tests
